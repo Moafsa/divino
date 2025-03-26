@@ -1,81 +1,54 @@
-# Divino Ristorante
+# Divino Lanches
 
-Sistema de gerenciamento para restaurante italiano, desenvolvido com Next.js 13, TypeScript, Tailwind CSS e Prisma.
+Sistema web para a Divino Lanches de Flores da Cunha, permitindo gerenciamento de pedidos, cardápio e atendimento aos clientes.
 
 ## Funcionalidades
 
-- 🏠 Site institucional com informações do restaurante
-- 🍝 Cardápio digital
-- 👨‍🍳 Interface para cozinha gerenciar pedidos
-- 💰 Sistema de caixa para controle de pagamentos
-- 🤵 Área do garçom para gerenciamento de mesas e comandas
-- 📊 Relatórios e dashboards administrativos
-- 👥 Sistema de autenticação e controle de acesso por perfis
+- 🍔 Cardápio digital com categorias e produtos
+- 🛒 Carrinho de compras
+- 📝 Sistema de pedidos
+- 🪑 Gerenciamento de mesas e comandas
+- 👥 Área administrativa para gestão do estabelecimento
+- 🔐 Sistema de autenticação para funcionários
 
 ## Tecnologias
 
 - Next.js 13 (App Router)
 - TypeScript
-- Tailwind CSS
 - Prisma (SQLite)
+- TailwindCSS
 - NextAuth.js
-- Lucide Icons
-- Shadcn/ui
-
-## Pré-requisitos
-
-- Node.js 18+
-- npm ou yarn
+- Radix UI
 
 ## Instalação
 
-1. Clone o repositório
+1. Clone o repositório:
 ```bash
 git clone https://github.com/Moafsa/divino.git
-cd divino
 ```
 
-2. Instale as dependências
+2. Instale as dependências:
 ```bash
 npm install
-# ou
-yarn
 ```
 
-3. Configure as variáveis de ambiente
+3. Configure o banco de dados:
 ```bash
-cp .env.example .env
-```
-
-4. Execute as migrações do banco de dados
-```bash
+npx prisma generate
 npx prisma migrate dev
 ```
 
-5. Inicie o servidor de desenvolvimento
+4. Inicie o servidor de desenvolvimento:
 ```bash
 npm run dev
-# ou
-yarn dev
 ```
-
-O projeto estará disponível em `http://localhost:3000`
 
 ## Estrutura do Projeto
 
-```
-src/
-  ├── app/              # Rotas e páginas (Next.js App Router)
-  ├── components/       # Componentes React reutilizáveis
-  ├── lib/             # Utilitários e configurações
-  ├── types/           # Definições de tipos TypeScript
-  └── styles/          # Estilos globais
-prisma/
-  ├── schema.prisma    # Schema do banco de dados
-  └── migrations/      # Migrações do banco de dados
-public/               # Arquivos estáticos
-```
+- `/src/app` - Rotas e páginas da aplicação
+- `/src/components` - Componentes reutilizáveis
+- `/prisma` - Schema e migrações do banco de dados
 
 ## Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
